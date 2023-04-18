@@ -45,7 +45,7 @@ def get_agent(agent_type="normal", Env=None, v_sweep=5, **constants):
         )
         Ag.compression_factor = 1
     elif agent_type == "theta":
-        Ag = ThetaSweepAgent(
+        Ag = ThetaSequenceAgent(
             Env,
             params={
                 "dt": constants["dt"],
